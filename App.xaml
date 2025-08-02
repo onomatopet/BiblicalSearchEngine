@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:BiblicalSearchEngine"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Styles globaux -->
     </Application.Resources>
 </Application>
