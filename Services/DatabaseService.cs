@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 ﻿using BiblicalSearchEngine.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SQLite;
+using System.IO;
+using BiblicalSearchEngine.Models;
+>>>>>>> fa904caa9f4c9cfaa5f9c55f6a5fd4e729e294be
 
 namespace BiblicalSearchEngine.Services
 {
     public class DatabaseService
     {
+<<<<<<< HEAD
         private readonly string dbPath;
         private readonly string connectionString;
 
@@ -19,6 +28,16 @@ namespace BiblicalSearchEngine.Services
         }
 
         public void Initialize()
+=======
+        private readonly string dbPath = Path.Combine(
+            AppDomain.CurrentDomain.BaseDirectory,
+            "BiblicalSearch.db"
+        );
+
+        private readonly string connectionString;
+
+        public static void Initialize()
+>>>>>>> fa904caa9f4c9cfaa5f9c55f6a5fd4e729e294be
         {
             if (!File.Exists(dbPath))
             {
@@ -70,7 +89,11 @@ namespace BiblicalSearchEngine.Services
             }
         }
 
+<<<<<<< HEAD
         public int SaveDocument(Document doc)
+=======
+        public static int SaveDocument(Document doc)
+>>>>>>> fa904caa9f4c9cfaa5f9c55f6a5fd4e729e294be
         {
             using (var conn = new SQLiteConnection(connectionString))
             {
@@ -107,7 +130,11 @@ namespace BiblicalSearchEngine.Services
             return doc.Id;
         }
 
+<<<<<<< HEAD
         public List<Document> GetAllDocuments()
+=======
+        public static List<Document> GetAllDocuments()
+>>>>>>> fa904caa9f4c9cfaa5f9c55f6a5fd4e729e294be
         {
             var documents = new List<Document>();
 
@@ -155,6 +182,7 @@ namespace BiblicalSearchEngine.Services
 
             return documents;
         }
+<<<<<<< HEAD
 
         public void SaveBibleVerses(List<BibleVerse> verses)
         {
@@ -283,5 +311,7 @@ namespace BiblicalSearchEngine.Services
 
             return references;
         }
+=======
+>>>>>>> fa904caa9f4c9cfaa5f9c55f6a5fd4e729e294be
     }
 }

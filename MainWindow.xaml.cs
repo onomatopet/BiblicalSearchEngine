@@ -61,6 +61,7 @@ namespace BiblicalSearchEngine
 
         private void AdvancedSearch_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             var advancedSearch = new Views.AdvancedSearchWindow();
             advancedSearch.Owner = this;
 
@@ -69,6 +70,9 @@ namespace BiblicalSearchEngine
                 viewModel.SearchQuery = advancedSearch.GeneratedQuery;
                 viewModel.Search();
             }
+=======
+            // Ouvrir fenêtre de recherche avancée
+>>>>>>> fa904caa9f4c9cfaa5f9c55f6a5fd4e729e294be
         }
 
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
